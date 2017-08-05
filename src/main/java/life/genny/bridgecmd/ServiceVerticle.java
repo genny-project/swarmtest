@@ -33,11 +33,10 @@ public class ServiceVerticle extends AbstractVerticle {
 	public Future<Void> createCluster() {
 		Future<Void> startFuture = Future.future();
 
-		System.out.println("hazelcastInterface=[" + System.getProperty("hazelcastInterface") + "]");
 
 		vertx.executeBlocking(future -> {
 			Config conf = new ClasspathXmlConfig("hazelcast-genny.xml");
-			System.out.println("Starting hazelcast DISCOVERY!");
+			System.out.println("Starting hazelcast DISCOVERY!!!!!");
 			NodeContext nodeContext = new DefaultNodeContext() {
 				@Override
 				public AddressPicker createAddressPicker(Node node) {
